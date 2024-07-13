@@ -1,0 +1,473 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(66, 64, 64);
+  width: 100vw;
+}
+.homepage::before {
+  /* shadow effect overlay */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  mix-blend-mode: multiply; /* Adjust blend mode for desired effect */
+}
+.homepage {
+  width: 100vw;
+  height: 93vh;
+  background-image: url("bgc.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#header {
+  z-index: 2;
+  height: 15vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#signIn {
+  width: 85px;
+  height: 35px;
+  background-color: #e80a0a;
+  border-radius: 5%;
+  color: white;
+  border: solid #e80a0a 1px;
+  font-size: medium;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  right: 10vw;
+}
+
+.svg-small-red {
+  width: 140px;
+  /* Set the desired width */
+  fill: red;
+  /* Set the fill color to red */
+  position: relative;
+  left: 10vw;
+}
+
+.content {
+  z-index: 2;
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#unlimited,
+.Enjoy,
+#heading {
+  width: 100vw;
+  height: 13vh;
+  font-size: 3rem;
+  font-weight: bolder;
+  color: white;
+  text-align: center;
+  margin-bottom: 6px;
+}
+#unlim {
+  letter-spacing: 2px;
+}
+#readytowatch {
+  width: 100vw;
+  height: 12vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: space-between;
+}
+.text {
+  text-align: center;
+}
+#buttontextDiv {
+  z-index: 2;
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+#textfield {
+  height: 8vh;
+  width: 403px;
+  padding: 5px;
+  background-color: rgba(11, 10, 10, 0.61);
+  border: solid rgba(107, 101, 101, 0.726) 1px;
+  border-radius: 1px;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+}
+#textfield::placeholder {
+  color: rgb(167, 166, 166);
+}
+#buttonDiv {
+  height: 8vh;
+  width: 187px;
+  background-color: #e80a0afe;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.938);
+  font-size: 1.7rem;
+  font-weight: lighter;
+  margin-left: 5px;
+}
+/* next tc sectin************************************* */
+#mobileSection,
+#tvSection {
+  width: 100vw;
+  height: 80vh;
+  margin-top: 5px;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: row;
+}
+.content-part {
+  color: white;
+  width: 50vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#Enjoy {
+  width: 50vw;
+  height: 13vh;
+  font-size: 3rem;
+  font-weight: bolder;
+  color: white;
+  text-align: center;
+  margin-bottom: 6px;
+}
+.smartTv {
+  width: 35vw;
+  height: 12vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+}
+
+#video-part {
+  width: 50vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#imageTv {
+  width: 80%;
+  height: 80%;
+  z-index: 3;
+  /* Maintains a 16:9 aspect ratio */
+}
+#video {
+  position: absolute;
+  height: 60%;
+  width: 60%;
+}
+/* 3rd slide************************************* */
+#mobile-part {
+  width: 50vw;
+  height: 100%;
+  position: relative;
+}
+#mobilePic {
+  position: absolute;
+  top: 10vh;
+  left: 10vw;
+  width: 75%;
+  height: 68%;
+}
+#downloadingBox {
+  border: rgba(77, 76, 76, 0.849) 2px solid;
+  background-color: black;
+  border-radius: 1.1rem;
+  position: absolute;
+  z-index: 4;
+  width: 45%;
+  height: 18%;
+  bottom: 18vh;
+  right: 10vw;
+  display: flex;
+  gap: 25px;
+}
+#boxShot {
+  position: relative;
+  left: 1rem;
+  top: 0.5rem;
+  height: 80%;
+  width: 18%;
+}
+#box {
+  width: 50%;
+  height: 80%;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#stranger {
+  font-weight: bold;
+}
+#down {
+  color: rgb(0, 0, 254);
+}
+/*  */
+#mobileWrite {
+  align-items: start;
+  justify-content: center;
+  color: white;
+  width: 50vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#offline {
+  text-align: start;
+  margin-bottom: 8vh;
+  width: 50vw;
+  height: 13vh;
+  font-size: 3rem;
+  font-weight: bolder;
+  color: white;
+}
+#save {
+  width: 35vw;
+  height: 12vh;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  text-align: start;
+}
+/* 4th last ***************** */
+#questions {
+  width: 100vw;
+  background-color: black;
+  margin-top: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+table {
+  width: 80vw;
+  border-collapse: separate; /* Ensure border-spacing works */
+  border-spacing: 0 15px;
+  margin-bottom: 20vh;
+}
+details {
+  padding: 30px;
+}
+summary {
+  font-size: 2rem;
+}
+td {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+tr {
+  width: 100%;
+  /* height: 5vh; */
+  background-color: rgb(37, 35, 35);
+  transition: background-color 0.5s ease;
+}
+tr:hover{
+  background-color: grey;
+}
+#rowContent {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+
+}
+/* ************************************************************************* */
+@media (max-width: 600px) {
+  #mobileSection {
+    flex-direction: column;
+    height: 70vh;
+  }
+
+  #mobile-part {
+    width: 100vw;
+    height: 60%;
+    position: relative;
+    order: 2; /* Will appear second *********************************s*/
+  }
+  #mobilePic {
+    position: absolute;
+    top: 0vh;
+    left: 6vw;
+    width: 90%;
+    height: 75%;
+  }
+  #downloadingBox {
+    width: 65%;
+    height: 18%;
+    bottom: 13vh;
+    right: 17vw;
+  }
+  #box {
+    height: 100%;
+    color: white;
+  }
+
+  /*  */
+  #mobileWrite {
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 40%;
+  }
+  #offline,
+  #heading {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1vh;
+    height: 9vh;
+    font-size: 1.5rem;
+  }
+  br {
+    display: none;
+  }
+  #save {
+    width: 80%;
+    height: 12vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    text-align: center;
+  }
+  #tvSection {
+    flex-direction: column;
+    height: 65vh;
+  }
+
+  .content-part {
+    width: 100vw;
+    height: 40%;
+    display: flex;
+  }
+  .Enjoy {
+    width: 100vw;
+    height: 10vh;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .smartTv {
+    width: 100vw;
+    height: 12vh;
+    text-align: center;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #video-part {
+    width: 100vw;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  #imageTv {
+    width: 90%;
+    height: 90%;
+    z-index: 3;
+    /* Maintains a 16:9 aspect ratio */
+  }
+  #video {
+    position: absolute;
+    height: 70%;
+    width: 65%;
+  }
+  #textfield {
+    height: 6vh;
+    width: 70vw;
+  }
+  #unlim {
+    letter-spacing: none;
+  }
+  #buttonDiv {
+    margin-top: 6px;
+    height: 5vh;
+    width: 140px;
+    font-size: 1.2rem;
+    margin-left: none;
+  }
+  .svg-small-red {
+    left: 5vw;
+    width: 100px;
+  }
+  #signIn {
+    right: 5vw;
+  }
+  .homepage {
+    height: 50vh;
+  }
+
+  #unlimited {
+    width: 70vw;
+    height: 13vh;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  #readytowatch {
+    font-size: 1.2rem;
+    width: 80vw;
+  }
+  .content {
+    justify-content: none;
+  }
+  #buttontextDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+/* font gooooogleeee */
+.anton-sc-regular {
+  font-family: "Anton SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.archivo-black-regular {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
